@@ -1,0 +1,45 @@
+/* Simple, recruiter-friendly styling (no frameworks) */
+:root{
+  --bg:#0b0f14;
+  --card:#0f1721;
+  --text:#e8eef6;
+  --muted:#a9b6c6;
+  --border:#1f2b3a;
+  --accent:#5aa7ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text);}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.header{padding-top:44px;padding-bottom:10px}
+.hero h1{margin:0;font-size:40px;letter-spacing:-0.02em}
+.subtitle{margin:10px 0 16px;color:var(--muted);font-size:16px}
+.meta{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+.meta li{color:var(--muted)}
+.card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 18px; margin:16px 0}
+.card h2{margin:0 0 10px;font-size:18px}
+.grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+.tile{border:1px solid var(--border); border-radius:12px; padding:14px; background:rgba(255,255,255,0.02)}
+.tile h3{margin:0 0 8px; font-size:16px}
+.muted{color:var(--muted); margin:0 0 10px; font-size:13px}
+.tagrow{margin:10px 0 0; display:flex; flex-wrap:wrap; gap:8px}
+.tag{border:1px solid var(--border); color:var(--muted); padding:4px 8px; border-radius:999px; font-size:12px}
+.timeline{display:grid; gap:14px}
+.role{padding:10px 0; border-top:1px dashed var(--border)}
+.role:first-child{border-top:none}
+.role-head{display:flex; justify-content:space-between; align-items:baseline; gap:16px}
+.role-head h3{margin:0; font-size:15px}
+.when{color:var(--muted); font-size:13px; white-space:nowrap}
+ul{margin:8px 0 0 18px; color:var(--text)}
+li{margin:6px 0; color:var(--text)}
+.skills{color:var(--text); line-height:1.6}
+.cta-row{display:flex; gap:10px; flex-wrap:wrap}
+.btn{display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,0.03); color:var(--text); font-weight:600}
+.btn.primary{border-color:rgba(90,167,255,0.45); background:rgba(90,167,255,0.12)}
+.footer{padding-top:10px;padding-bottom:40px;color:var(--muted); font-size:13px}
+@media (max-width: 900px){
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .role-head{flex-direction:column; align-items:flex-start}
+}
